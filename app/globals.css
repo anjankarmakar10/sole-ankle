@@ -66,6 +66,9 @@
   }
 }
 
+* {
+  font-family: "Raleway", sans-serif;
+}
 @layer base {
   * {
     @apply border-border;
@@ -80,7 +83,7 @@
   display: block;
   font-size: 1.125rem;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: 500;
   position: relative;
   cursor: pointer;
   overflow: hidden;
@@ -104,7 +107,7 @@
   position: absolute;
   top: 0;
   left: 0;
-  font-weight: 600;
+  font-weight: 500;
   height: 100%;
   width: 100%;
   text-wrap: nowrap;
@@ -115,4 +118,23 @@
 .nav-link:hover .text {
   transition: transform 200ms;
   transform: translateY(var(--translate-to));
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(-3%);
+    animation-timing-function: linear;
+  }
+  50% {
+    transform: translateY(3%);
+    animation-timing-function: linear;
+  }
+}
+.animate-bounce {
+  animation: bounce 12s infinite;
+}
+
+.hero-height {
+  min-height: calc(112px - 100vh);
 }

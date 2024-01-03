@@ -5,7 +5,7 @@ import Navbar from "./navbar";
 
 const Header = () => {
   return (
-    <header className="sticky top-[-10px] md:top-[-40px] transition-all">
+    <header className="sticky top-[-10px] md:top-[-40px] transition-all z-50 bg-white">
       <div className="md:hidden h-2 bg-gray-700"></div>
       <section className="hidden md:flex px-8  h-10  items-center bg-gray-700 text-white justify-between">
         <span className="text-sm font-medium">
@@ -15,7 +15,7 @@ const Header = () => {
           <form className="flex items-center gap-2 border-b pb-1">
             <Search width={16} height={16} />
             <Input
-              className="text-gray-300  p-0 placeholder:text-gray-300 border-0 h-4 focus-visible:ring-0"
+              className="text-gray-300  p-0 placeholder:text-gray-300 border-0 h-5 focus-visible:ring-0"
               type="search"
               placeholder="Search"
             />
