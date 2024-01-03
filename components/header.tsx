@@ -1,10 +1,11 @@
 import { Search, ShoppingBag } from "lucide-react";
 import Link from "next/link";
 import { Input } from "./ui/input";
+import Navbar from "./navbar";
 
 const Header = () => {
   return (
-    <header className="">
+    <header className="sticky top-[-10px] md:top-[-40px] transition-all">
       <div className="md:hidden h-2 bg-gray-700"></div>
       <section className="hidden md:flex px-8  h-10  items-center bg-gray-700 text-white justify-between">
         <span className="text-sm font-medium">
@@ -22,9 +23,10 @@ const Header = () => {
           <Link className="text-sm" href={"/"}>
             Help
           </Link>
-          <ShoppingBag height={24} width={24} />
+          <ShoppingBag />
         </div>
       </section>
+      <Navbar />
     </header>
   );
 };

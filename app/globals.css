@@ -74,3 +74,45 @@
     @apply bg-background text-foreground;
   }
 }
+
+.nav-link {
+  isolation: isolate;
+  display: block;
+  font-size: 1.125rem;
+  text-decoration: none;
+  font-weight: 600;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+  text-transform: uppercase;
+  @apply text-gray-800;
+  text-wrap: nowrap;
+}
+
+.text {
+  display: block;
+  transform: translateY(var(--translate-from));
+  transition: transform 500ms;
+}
+
+.main-text {
+  --translate-from: 0%;
+  --translate-to: -100%;
+}
+
+.hover-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-weight: 600;
+  height: 100%;
+  width: 100%;
+  text-wrap: nowrap;
+  --translate-from: 100%;
+  --translate-to: 0%;
+}
+
+.nav-link:hover .text {
+  transition: transform 200ms;
+  transform: translateY(var(--translate-to));
+}
