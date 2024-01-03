@@ -1,6 +1,7 @@
 import Link from "next/link";
 import NavLink from "./navlink";
-import { Menu, Search, ShoppingBag } from "lucide-react";
+import { Search, ShoppingBag } from "lucide-react";
+import MobileMenu from "./mobile-menu";
 
 const Navbar = () => {
   return (
@@ -20,7 +21,7 @@ const Navbar = () => {
         <div className="flex md:hidden gap-4 sm:gap-8 items-center">
           <ShoppingBag />
           <Search />
-          <Menu />
+          <MobileMenu />
         </div>
       </div>
     </nav>
