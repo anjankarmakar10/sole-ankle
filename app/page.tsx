@@ -2,8 +2,9 @@ import Header from "@/components/header";
 
 export default function Home() {
   return (
-    <main className="h-[200vh]">
+    <>
       <Header />
-    </main>
+      <main className="mt-8 md:mt-8 px-8">sdfsdfsd</main>
+    </>
   );
 }
