@@ -1,14 +1,11 @@
 import {
   Card,
-  CardContent,
   CardDescription,
-  CardFooter,
   CardHeader,
   CardTitle,
 } from "@/components/ui/card";
 import convertToUSD from "@/lib/convertToUSD";
-import { AspectRatio } from "@radix-ui/react-aspect-ratio";
-import Image from "next/image";
+
 import ShoeImage from "./ShoeImage";
 
 interface Props {

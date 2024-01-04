@@ -4,11 +4,15 @@ import { AspectRatio } from "./ui/aspect-ratio";
 interface Props {
   src: string;
   alt: string;
+  ratio?: number;
 }
 
-const ShoeImage = ({ src, alt }: Props) => {
+const ShoeImage = ({ src, alt, ratio }: Props) => {
   return (
-    <AspectRatio ratio={16 / 10} className="bg-muted overflow-hidden rounded">
+    <AspectRatio
+      ratio={ratio || 16 / 10}
+      className="bg-muted overflow-hidden rounded"
+    >
       <Image
         src={src}
         alt={alt}
