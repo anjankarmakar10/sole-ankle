@@ -38,16 +38,14 @@ const ShoePageHeader = () => {
           <span className="text-gray-600">Sort</span>
           <Select>
             <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="Select a fruit" />
+              <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
               <SelectGroup>
-                <SelectLabel>Fruits</SelectLabel>
-                <SelectItem value="apple">Apple</SelectItem>
-                <SelectItem value="banana">Banana</SelectItem>
-                <SelectItem value="blueberry">Blueberry</SelectItem>
-                <SelectItem value="grapes">Grapes</SelectItem>
-                <SelectItem value="pineapple">Pineapple</SelectItem>
+                <SelectItem value="all">All</SelectItem>
+                <SelectItem value="newest">Newest Releases</SelectItem>
+                <SelectItem value="price">Price</SelectItem>
+                <SelectItem value="popular">Popular</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>
