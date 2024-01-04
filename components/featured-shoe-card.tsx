@@ -24,7 +24,7 @@ const FeaturedShoeCard = ({ shoe }: Props) => {
         >
           <Image
             src={shoe.imageSrc}
-            alt="Photo by Drew Beamer"
+            alt={shoe.name}
             fill
             className="rounded-md object-cover 
             brightness-90 
