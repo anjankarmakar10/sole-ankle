@@ -9,10 +9,10 @@ import {
 } from "@/components/ui/carousel";
 import FeaturedShoeCard from "./featured-shoe-card";
 
-import useFeaturedShoes from "@/hooks/useFeaturedShoes";
+import useFilterShoes from "@/hooks/useFilterShoes";
 
 const Featureds = () => {
-  const { shoes } = useFeaturedShoes();
+  const { shoes } = useFilterShoes("featured");
 
   return (
     <section>

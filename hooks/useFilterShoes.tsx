@@ -1,7 +1,7 @@
 import { STARPI_URL } from "@/lib/constants";
 import { useEffect, useState } from "react";
 
-const useNewShoes = () => {
+const useFilterShoes = (filter: string) => {
   const [shoes, setShoes] = useState<Shoe[]>();
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState<String>();
@@ -10,7 +10,7 @@ const useNewShoes = () => {
     try {
       setLoading(true);
       const res = await fetch(
-        `${STARPI_URL}/api/shoes?filters[new][$eq]=true&&populate[image][populate]=true`,
+        `${STARPI_URL}/api/shoes?filters[${filter}][$eq]=true&&populate[image][populate]=true`,
         { signal: controller.signal }
       );
       const data: Response = await res.json();
@@ -34,4 +34,4 @@ const useNewShoes = () => {
 
   return { shoes, loading, error };
 };
-export default useNewShoes;
+export default useFilterShoes;
