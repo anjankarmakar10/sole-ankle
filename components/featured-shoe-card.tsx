@@ -14,7 +14,7 @@ interface Props {
 
 const FeaturedShoeCard = ({ shoe }: Props) => {
   return (
-    <Card>
+    <Card className="cursor-pointer">
       <CardHeader className="p-4 overflow-hidden group cursor-pointer">
         <ShoeImage
           src={STARPI_URL + shoe.attributes.image.data.attributes.url}
@@ -23,7 +23,7 @@ const FeaturedShoeCard = ({ shoe }: Props) => {
         <CardTitle className="line-clamp-1 pt-1">
           {shoe.attributes.name}
         </CardTitle>
-        <CardDescription>Number of colors: {2}</CardDescription>
+
         <CardDescription className="text-base font-semibold">
           Price: {convertToUSD(shoe.attributes.price)}
         </CardDescription>
