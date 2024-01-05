@@ -12,7 +12,7 @@ const ShoePageHeader = () => {
   return (
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
       <div className="lg:basis-[248px] ">
-        <ol className="list-reset flex text-sm text-gray-600">
+        <ol className="list-reset flex text-sm text-gray-600 font-medium">
           <li>
             <a href="#" className="">
               Home
@@ -41,11 +41,10 @@ const ShoePageHeader = () => {
               <SelectValue placeholder="All" />
             </SelectTrigger>
             <SelectContent>
-              <SelectGroup>
+              <SelectGroup className="font-medium">
                 <SelectItem value="all">All</SelectItem>
                 <SelectItem value="newest">Newest Releases</SelectItem>
                 <SelectItem value="price">Price</SelectItem>
-                <SelectItem value="popular">Popular</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

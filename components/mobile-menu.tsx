@@ -25,7 +25,6 @@ const MobileMenu = () => {
           </SheetHeader>
           <div className="flex flex-col gap-5 py-8">
             <NavLink href="/">Sale</NavLink>
-            <NavLink href="/">New Releases</NavLink>
             <NavLink href="/">Men</NavLink>
             <NavLink href="/">Women</NavLink>
             <NavLink href="/">Kids</NavLink>

@@ -16,6 +16,7 @@ const ShoeImage = ({ src, alt, ratio }: Props) => {
       <Image
         src={src}
         alt={alt}
+        loading="lazy"
         fill
         className="rounded-md object-cover 
             brightness-90 

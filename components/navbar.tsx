@@ -11,7 +11,6 @@ const Navbar = () => {
       </Link>
       <div className="hidden md:flex items-center gap-12">
         <NavLink href="/sale">Sale</NavLink>
-        <NavLink href="/">New Releases</NavLink>
         <NavLink href="/">Men</NavLink>
         <NavLink href="/">Women</NavLink>
         <NavLink href="/">Kids</NavLink>

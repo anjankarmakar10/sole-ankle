@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const Sidebar = () => {
   return (
-    <div className=" flex-col gap-2 basis-[248px] hidden md:flex">
+    <div className=" flex-col gap-2 font-medium text-gray-700 basis-[248px] font-medium  hidden md:flex">
       <Link href="/lifestyle">Lifestyle</Link>
       <Link href="/jordan">Jordan</Link>
       <Link href="/running">Running</Link>

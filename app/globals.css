@@ -67,7 +67,7 @@
 }
 
 * {
-  font-family: "Raleway", sans-serif;
+  font-family: "Inter", sans-serif;
 }
 @layer base {
   * {
@@ -83,12 +83,12 @@
   display: block;
   font-size: 1.125rem;
   text-decoration: none;
-  font-weight: 500;
+  font-weight: 600;
   position: relative;
   cursor: pointer;
   overflow: hidden;
   text-transform: uppercase;
-  @apply text-gray-800;
+  @apply text-gray-700;
   text-wrap: nowrap;
 }
 
@@ -105,9 +105,10 @@
 
 .hover-text {
   position: absolute;
+  @apply text-gray-700;
   top: 0;
   left: 0;
-  font-weight: 500;
+  font-weight: 600;
   height: 100%;
   width: 100%;
   text-wrap: nowrap;

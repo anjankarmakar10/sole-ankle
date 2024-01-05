@@ -18,7 +18,7 @@ const NewArrivals = () => {
         <h1 className="text-2xl font-semibold mb-4 ml-1">New Arrivals</h1>
       </header>
 
-      <div className="flex justify-center">
+      {/* <div className="flex justify-center">
         <Carousel
           opts={{
             align: "start",
@@ -37,7 +37,7 @@ const NewArrivals = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      </div>
+      </div> */}
     </section>
   );
 };

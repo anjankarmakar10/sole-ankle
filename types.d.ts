@@ -1,10 +1,77 @@
-type Shoe = {
+interface ImageFormats {
+  thumbnail: {
+    name: string;
+    url: string;
+  };
+  medium: {
+    name: string;
+    url: string;
+  };
+  small: {
+    name: string;
+    url: string;
+  };
+}
+
+interface ImageData {
   id: number;
-  name: string;
-  imageSrc: string;
-  price: number;
-  releaseDate: number;
-  numOfColors: number;
-  isNew: boolean;
-  fetured?: boolean;
-};
+  attributes: {
+    name: string;
+    url: string;
+  };
+}
+
+interface SubCategory {
+  id: number;
+  attributes: {
+    name: string;
+  };
+}
+
+interface Color {
+  id: number;
+  attributes: {
+    name: string;
+    code: string;
+  };
+}
+
+interface Size {
+  id: number;
+  attributes: {
+    number: string;
+  };
+}
+
+interface Response {
+  data: Shoe[];
+  meta: Meta;
+}
+
+interface Meta {
+  pagination: {
+    page: number;
+    pageSize: number;
+    pageCount: number;
+    total: number;
+  };
+}
+
+interface Shoe {
+  id: number;
+  attributes: {
+    name: string;
+    description: any;
+    new: boolean;
+    price: number;
+    featured: boolean;
+    createdAt: string;
+    updatedAt: string;
+    publishedAt: string;
+    slug: string;
+    image: { data: ImageData };
+    subCategories: { data: SubCategory[] };
+    colors: { data: Color[] };
+    sizes: { data: Size[] };
+  };
+}
