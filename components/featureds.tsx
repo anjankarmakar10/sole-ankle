@@ -9,17 +9,18 @@ import {
 } from "@/components/ui/carousel";
 import FeaturedShoeCard from "./featured-shoe-card";
 
-import { featuredShoes } from "@/lib/data";
 import useFeaturedShoes from "@/hooks/useFeaturedShoes";
 
 const Featureds = () => {
+  const { shoes } = useFeaturedShoes();
+
   return (
     <section>
       <header>
         <h1 className="text-2xl font-semibold mb-4 ml-1">Featured</h1>
       </header>
 
-      {/* <div className="flex justify-center">
+      <div className="flex justify-center">
         <Carousel
           opts={{
             align: "start",
@@ -27,7 +28,7 @@ const Featureds = () => {
           className="w-[80%] md:w-[90%] lg:w-[95%]"
         >
           <CarouselContent>
-            {featuredShoes.map((shoe, index) => (
+            {shoes?.map((shoe, index) => (
               <CarouselItem key={index} className="md:basis-1/2 ">
                 <div className="p-1">
                   <FeaturedShoeCard shoe={shoe} />
@@ -38,7 +39,7 @@ const Featureds = () => {
           <CarouselPrevious />
           <CarouselNext />
         </Carousel>
-      </div> */}
+      </div>
     </section>
   );
 };
