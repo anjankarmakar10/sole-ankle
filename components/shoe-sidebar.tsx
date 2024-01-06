@@ -12,6 +12,7 @@ const Sidebar = async () => {
 
   return (
     <div className=" flex-col gap-2  text-gray-700 basis-[248px] font-medium  hidden md:flex capitalize cursor-pointer">
+      <div>All Shoes</div>
       {data.data.map((item) => (
         <div key={item.id}>{item.attributes.name}</div>
       ))}

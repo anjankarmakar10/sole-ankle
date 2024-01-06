@@ -25,7 +25,7 @@ const ShoePageHeader = () => {
         </ol>
       </div>
       <div className="flex-1 flex justify-between items-center">
-        <h1 className="text-2xl font-semibold">Running</h1>
+        <h1 className="text-2xl font-semibold">All Shoes</h1>
         <div className=" items-center gap-4 hidden sm:flex">
           <span className="text-gray-600">Sort</span>
           <Select>
