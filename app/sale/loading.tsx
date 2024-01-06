@@ -33,7 +33,7 @@ const LoadingPage = () => {
           <Skeleton className="h-6 w-40" />
           <Skeleton className="h-6 w-40" />
         </div>
-        <section className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
+        <section className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {new Array(6).fill("").map((_, index) => (
             <article key={index} className="flex  flex-col gap-[14px] ">
               <Skeleton className="w-[327px] h-[218px] rounded-s-2xl  rounded-e-2xl  rounded-b-lg " />
