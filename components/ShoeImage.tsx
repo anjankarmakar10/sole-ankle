@@ -19,10 +19,11 @@ const ShoeImage = ({ src, alt, ratio }: Props) => {
         loading="lazy"
         fill
         className="rounded-md object-cover 
-            brightness-90 
+            md:brightness-90 
             will-change-transform
             origin-[50% 75%]
-            duration-700 transition-all
+            duration-700 
+            transition-all
 
             hover:scale-110
             hover:transition-all

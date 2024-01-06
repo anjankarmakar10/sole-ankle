@@ -57,6 +57,13 @@ interface Meta {
   };
 }
 
+interface Category {
+  id: number;
+  attributes: {
+    name: string;
+  };
+}
+
 interface Shoe {
   id: number;
   attributes: {
@@ -70,6 +77,7 @@ interface Shoe {
     publishedAt: string;
     slug: string;
     image: { data: ImageData };
+    categories: { data: Category[] };
     subCategories: { data: SubCategory[] };
     colors: { data: Color[] };
     sizes: { data: Size[] };

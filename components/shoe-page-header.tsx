@@ -3,7 +3,6 @@ import {
   SelectContent,
   SelectGroup,
   SelectItem,
-  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select";
@@ -21,15 +20,8 @@ const ShoePageHeader = () => {
           <li>
             <span className="mx-2 ">/</span>
           </li>
-          <li>
-            <a href="#" className="">
-              Sale
-            </a>
-          </li>
-          <li>
-            <span className="mx-2 ">/</span>
-          </li>
-          <li className="">Shoes</li>
+
+          <li className="">Sale</li>
         </ol>
       </div>
       <div className="flex-1 flex justify-between items-center">

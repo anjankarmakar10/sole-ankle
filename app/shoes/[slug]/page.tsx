@@ -14,8 +14,6 @@ interface Params {
 const ShoeDetailsPage = async ({ params }: Params) => {
   const { data } = await getShoe(params.slug);
 
-  console.log(data.attributes.colors.data);
-
   return (
     <section className=" mt-8 md:my-16 px-4 md:px-10 lg:px-20 pb-8 grid gap-4 md:gap-8 grid-cols-1 md:grid-cols-2 md:items-center">
       <ShoeImage
