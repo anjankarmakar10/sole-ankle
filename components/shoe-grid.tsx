@@ -9,7 +9,7 @@ import { RootState } from "@/redux/store/store";
 import { Skeleton } from "./ui/skeleton";
 import useProducts from "@/hooks/useProducts";
 const ShoeGrid = () => {
-  const category = useSelector((state: RootState) => state.category.value);
+  const category = useSelector((state: RootState) => state.filters.catagory);
   // const { shoes, loading } = useShoes(category)
 
   const { data, isLoading } = useProducts(category);

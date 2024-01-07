@@ -1,6 +1,6 @@
 "use client";
 
-import { setCategory } from "@/redux/state/category/categorySlice";
+import { setFilters } from "@/redux/state/filters/filtersSlice";
 import { useDispatch, useSelector } from "react-redux";
 import { RootState } from "@/redux/store/store";
 
@@ -75,7 +75,7 @@ const categories: SubCategory[] = [
 
 const Sidebar = () => {
   const dispatch = useDispatch();
-  const category = useSelector((state: RootState) => state.category.value);
+  const category = useSelector((state: RootState) => state.filters.catagory);
 
   return (
     <div className=" flex-col gap-2  text-gray-700 basis-[248px] font-medium hidden md:flex capitalize cursor-pointer">
@@ -84,7 +84,13 @@ const Sidebar = () => {
           className={`${
             item.attributes.name === category ? "font-bold text-gray-800" : ""
           }`}
-          onClick={() => dispatch(setCategory(item.attributes.name))}
+          onClick={() =>
+            dispatch(
+              setFilters({
+                catagory: item.attributes.name,
+              })
+            )
+          }
           key={item.id}
         >
           {item.attributes.name}
