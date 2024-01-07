@@ -36,8 +36,10 @@ const ShoePageHeader = () => {
             <SelectContent>
               <SelectGroup className="font-medium">
                 <SelectItem value="all">All</SelectItem>
-                <SelectItem value="newest">Newest Releases</SelectItem>
-                <SelectItem value="price">Price</SelectItem>
+                <SelectItem value="featured">Featured</SelectItem>
+                <SelectItem value="newest">Newest</SelectItem>
+                <SelectItem value="price dese">Price: High to Low</SelectItem>
+                <SelectItem value="price asc">Price: Low to High</SelectItem>
               </SelectGroup>
             </SelectContent>
           </Select>

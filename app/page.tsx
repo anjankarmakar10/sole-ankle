@@ -7,8 +7,8 @@ export default function Home() {
     <>
       <main className="mt-8 md:mt-8 px-8 pb-8 flex flex-col gap-8">
         <Hero />
-        <NewArrivals />
         <Featureds />
+        <NewArrivals />
       </main>
     </>
   );
