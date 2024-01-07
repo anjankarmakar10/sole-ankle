@@ -4,6 +4,7 @@ import "./globals.css";
 import Header from "@/components/header";
 import Footer from "@/components/footer";
 import ReduxProvider from "./ReduxProvider";
+import ReactQueryProvider from "./ReactQueryProvider";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -24,6 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ReduxProvider>
+          <ReactQueryProvider></ReactQueryProvider>
           <Header />
           {children}
           <Footer />
