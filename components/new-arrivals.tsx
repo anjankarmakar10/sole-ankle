@@ -11,9 +11,10 @@ import FeaturedShoeCard from "./featured-shoe-card";
 
 import useFilterShoes from "@/hooks/useFilterShoes";
 import { Skeleton } from "./ui/skeleton";
+import useNewProducts from "@/hooks/useFeaturedProducts";
 
 const NewArrivals = () => {
-  const { shoes, loading } = useFilterShoes("new");
+  const { data, isLoading } = useNewProducts();
 
   return (
     <section>
@@ -21,7 +22,7 @@ const NewArrivals = () => {
         <h1 className="text-2xl font-semibold mb-4 ml-1">New Arrivals</h1>
       </header>
 
-      {loading ? (
+      {isLoading ? (
         <div className="flex gap-4">
           <Skeleton className="h-[310px] w-full rounded-xl hidden lg:block" />
           <Skeleton className="h-[310px] w-full rounded-xl hidden md:block" />
@@ -36,7 +37,7 @@ const NewArrivals = () => {
             className="w-[80%] md:w-[90%] lg:w-[95%]"
           >
             <CarouselContent>
-              {shoes?.map((shoe, index) => (
+              {data?.data.map((shoe, index) => (
                 <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
                   <div className="p-1">
                     <FeaturedShoeCard shoe={shoe} />

@@ -14,9 +14,10 @@ const useFilterShoes = (filter: string) => {
         { signal: controller.signal }
       );
       const data: Response = await res.json();
-      setLoading(false);
       setShoes(data.data);
+      setLoading(false);
     } catch (error) {
+      setLoading(false);
       if (error instanceof Error) {
         if (error.message === "AbortError") return;
       } else {

@@ -2,9 +2,9 @@ import { STARPI_URL } from "@/lib/constants";
 import { useQuery } from "react-query";
 import ms from "ms";
 
-const useNewProducts = () => {
+const useFeaturedProducts = () => {
   const getFetchData = async () => {
-    const URL = `${STARPI_URL}/api/shoes?filters[new][$eq]=true&&populate[image][populate]=true`;
+    const URL = `${STARPI_URL}/api/shoes?filters[featured][$eq]=true&&populate[image][populate]=true`;
     return fetch(URL).then((res) => res.json());
   };
 
@@ -14,4 +14,4 @@ const useNewProducts = () => {
     staleTime: ms("24h"),
   });
 };
-export default useNewProducts;
+export default useFeaturedProducts;
