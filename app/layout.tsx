@@ -25,10 +25,11 @@ export default function RootLayout({
     <html lang="en">
       <body className={inter.className}>
         <ReduxProvider>
-          <ReactQueryProvider></ReactQueryProvider>
-          <Header />
-          {children}
-          <Footer />
+          <ReactQueryProvider>
+            <Header />
+            {children}
+            <Footer />
+          </ReactQueryProvider>
         </ReduxProvider>
       </body>
     </html>
