@@ -1,18 +1,16 @@
 import { STARPI_URL } from "@/lib/constants";
 import { useQuery } from "react-query";
 import ms from "ms";
-const useProducts = (category: string) => {
+import { FiltersState } from "@/redux/state/filters/filtersSlice";
+const useProducts = (filter: FiltersState) => {
   const getFetchData = async () => {
-    const URL =
-      category === "all shoes"
-        ? `${STARPI_URL}/api/shoes?populate=*`
-        : `${STARPI_URL}/api/shoes?filters[subCategories][name][$contains]=${category}&&populate=*`;
+    const URL = `${STARPI_URL}/api/shoes?filters[subCategories][name][$contains]=${filter.category}&&sort=${filter.price}&&populate=*`;
 
     return fetch(URL).then((res) => res.json());
   };
 
   return useQuery<Response>({
-    queryKey: ["products", category],
+    queryKey: ["products", filter],
     queryFn: getFetchData,
     staleTime: ms("24h"),
   });

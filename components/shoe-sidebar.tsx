@@ -8,7 +8,7 @@ const categories: SubCategory[] = [
   {
     id: 0,
     attributes: {
-      name: "all shoes",
+      name: "",
     },
   },
   {
@@ -75,19 +75,22 @@ const categories: SubCategory[] = [
 
 const Sidebar = () => {
   const dispatch = useDispatch();
-  const category = useSelector((state: RootState) => state.filters.catagory);
+  const filter = useSelector((state: RootState) => state.filters);
 
   return (
     <div className=" flex-col gap-2  text-gray-700 basis-[248px] font-medium hidden md:flex capitalize cursor-pointer">
       {categories.map((item) => (
         <div
           className={`${
-            item.attributes.name === category ? "font-bold text-gray-800" : ""
+            item.attributes.name === filter.category
+              ? "font-bold text-gray-800"
+              : ""
           }`}
           onClick={() =>
             dispatch(
               setFilters({
-                catagory: item.attributes.name,
+                category: item.attributes.name,
+                price: filter.price,
               })
             )
           }

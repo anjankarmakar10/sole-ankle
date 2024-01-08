@@ -1,10 +1,12 @@
 import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 
-interface FiltersState {
-  catagory: string;
+export interface FiltersState {
+  category: string;
+  price?: string;
 }
 const initialState: FiltersState = {
-  catagory: "all shoes",
+  category: "",
+  price: " ",
 };
 
 export const filtersSlice = createSlice({
@@ -12,7 +14,8 @@ export const filtersSlice = createSlice({
   initialState,
   reducers: {
     setFilters: (state, action: PayloadAction<FiltersState>) => {
-      state.catagory = action.payload.catagory;
+      state.category = action.payload.category;
+      state.price = action.payload.price;
     },
   },
 });

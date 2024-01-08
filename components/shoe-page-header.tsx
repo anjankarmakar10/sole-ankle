@@ -1,12 +1,5 @@
-import {
-  Select,
-  SelectContent,
-  SelectGroup,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
 import CategoryHeader from "./category-header";
+import FilterSort from "./filter-sort";
 
 const ShoePageHeader = () => {
   return (
@@ -27,23 +20,7 @@ const ShoePageHeader = () => {
       </div>
       <div className="flex-1 flex justify-between items-center">
         <CategoryHeader />
-        <div className=" items-center gap-4 hidden sm:flex">
-          <span className="text-gray-600">Sort</span>
-          <Select>
-            <SelectTrigger className="w-[180px]">
-              <SelectValue placeholder="All" />
-            </SelectTrigger>
-            <SelectContent>
-              <SelectGroup className="font-medium">
-                <SelectItem value="all">All</SelectItem>
-                <SelectItem value="featured">Featured</SelectItem>
-                <SelectItem value="newest">Newest</SelectItem>
-                <SelectItem value="price dese">Price: High to Low</SelectItem>
-                <SelectItem value="price asc">Price: Low to High</SelectItem>
-              </SelectGroup>
-            </SelectContent>
-          </Select>
-        </div>
+        <FilterSort />
       </div>
     </div>
   );
