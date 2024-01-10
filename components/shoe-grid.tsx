@@ -15,7 +15,7 @@ const ShoeGrid = () => {
 
   const shoes = data?.data;
 
-  if (shoes?.length === 0) return <div>no data found</div>;
+  if (shoes?.length === 0) return <div className="flex-1">no data found</div>;
   if (isLoading)
     return (
       <section className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">

@@ -6,12 +6,6 @@ import { RootState } from "@/redux/store/store";
 
 const categories: SubCategory[] = [
   {
-    id: 0,
-    attributes: {
-      name: "",
-    },
-  },
-  {
     id: 1,
     attributes: {
       name: "running",
@@ -78,14 +72,31 @@ const Sidebar = () => {
   const filter = useSelector((state: RootState) => state.filters);
 
   return (
-    <div className=" flex-col gap-2  text-gray-700 basis-[248px] font-medium hidden md:flex capitalize cursor-pointer">
+    <div className=" sm:flex-col sm:gap-2  text-gray-700 md:basis-[120px] lg:basis-[248px] font-medium  capitalize cursor-pointer flex flex-wrap gap-5">
+      <div
+        className={`${
+          "" === filter.category
+            ? "font-bold border sm:border-none   text-gray-800"
+            : " "
+        } px-2  py-1 sm:p-0 rounded transition-all`}
+        onClick={() =>
+          dispatch(
+            setFilters({
+              category: "",
+              price: filter.price,
+            })
+          )
+        }
+      >
+        All Shoes
+      </div>
       {categories.map((item) => (
         <div
           className={`${
             item.attributes.name === filter.category
-              ? "font-bold text-gray-800"
-              : ""
-          }`}
+              ? "font-bold sm:border-none  border text-gray-800"
+              : " "
+          } px-2  py-1 sm:p-0 rounded transition-all`}
           onClick={() =>
             dispatch(
               setFilters({

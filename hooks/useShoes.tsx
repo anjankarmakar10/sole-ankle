@@ -22,7 +22,7 @@ const getFetchData = async (category: string, controller: AbortController) => {
 
 // This function store cache values from previous request using emoization (memoization is an optimization technique)
 const optimizeDataFetching = (getData: Function) => {
-  const cache = {};
+  const cache: any = {};
   return async (category: string, controller: AbortController) => {
     if (category in cache) {
       console.log("From Cache");

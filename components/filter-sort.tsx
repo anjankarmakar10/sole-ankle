@@ -16,7 +16,7 @@ const FilterSort = () => {
   const dispatch = useDispatch();
   const filter = useSelector((state: RootState) => state.filters);
   return (
-    <div className=" items-center gap-4 hidden sm:flex">
+    <div className="flex items-center gap-4 ">
       <span className="text-gray-600">Sort</span>
       <Select
         onValueChange={(value) =>
@@ -28,7 +28,7 @@ const FilterSort = () => {
           )
         }
       >
-        <SelectTrigger className="w-[180px]">
+        <SelectTrigger className="w-full sm:w-[180px]">
           <SelectValue placeholder="Sort by price" />
         </SelectTrigger>
         <SelectContent>

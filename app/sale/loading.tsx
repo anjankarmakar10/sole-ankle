@@ -4,7 +4,7 @@ const LoadingPage = () => {
   return (
     <div className="mt-8 md:mt-8 px-8 pb-8 flex flex-col gap-8">
       <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-        <div className="lg:basis-[248px] ">
+        <div className="md:basis-[100px] lg:basis-[248px]">
           <Skeleton className="h-5 w-[152px]" />
         </div>
         <div className="flex-1 flex justify-between items-center">
@@ -35,9 +35,10 @@ const LoadingPage = () => {
         </div>
         <section className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {new Array(6).fill("").map((_, index) => (
-            <article key={index} className="flex  flex-col gap-[14px] ">
-              <Skeleton className="w-[327px] h-[218px] rounded-s-2xl  rounded-e-2xl  rounded-b-lg " />
-
+            <article key={index} className="flex  flex-col gap-[14px] w-full">
+              <div className="w-full">
+                <Skeleton className="w-full h-[218px] rounded-s-2xl  rounded-e-2xl  rounded-b-lg " />
+              </div>
               <div className="flex  justify-between gap-1 items-center">
                 <Skeleton className="h-6 w-[226px]" />
                 <Skeleton className="h-6 w-[64px]" />

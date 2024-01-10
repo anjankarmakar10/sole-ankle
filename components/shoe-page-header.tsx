@@ -1,5 +1,6 @@
 import CategoryHeader from "./category-header";
 import FilterSort from "./filter-sort";
+import MobileFilters from "./mobile-filters";
 
 const ShoePageHeader = () => {
   return (
@@ -20,7 +21,12 @@ const ShoePageHeader = () => {
       </div>
       <div className="flex-1 flex justify-between items-center">
         <CategoryHeader />
-        <FilterSort />
+        <div className="hidden sm:flex">
+          <FilterSort />
+        </div>
+        <div className="block sm:hidden">
+          <MobileFilters />
+        </div>
       </div>
     </div>
   );
