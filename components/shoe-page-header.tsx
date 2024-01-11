@@ -5,7 +5,7 @@ import MobileFilters from "./mobile-filters";
 const ShoePageHeader = () => {
   return (
     <div className="flex flex-col gap-2 lg:flex-row lg:items-center">
-      <div className="lg:basis-[248px] ">
+      <div className="lg:basis-[248px]">
         <ol className="list-reset flex text-sm text-gray-600 font-medium">
           <li>
             <a href="#" className="">

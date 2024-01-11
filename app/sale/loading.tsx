@@ -18,7 +18,7 @@ const LoadingPage = () => {
       </div>
 
       <div className="flex gap-8 justify-center">
-        <div className=" flex-col gap-2  text-gray-700 basis-[248px] font-medium  hidden md:flex">
+        <div className=" flex-col gap-2  text-gray-700 basis-[240px] font-medium  hidden md:flex md:basis-[120px] lg:basis-[240px]">
           <Skeleton className="h-6 w-40" />
           <Skeleton className="h-6 w-40" />
           <Skeleton className="h-6 w-40" />

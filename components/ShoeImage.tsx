@@ -25,16 +25,16 @@ const ShoeImage = ({ src, alt, ratio }: Props) => {
             duration-700 
             transition-all
 
-            hover:scale-110
+            md:hover:scale-110
             hover:transition-all
             hover:duration-300
             hover:brightness-100
-            focus:scale-110
+            md:focus:scale-110
             focus:brightness-100
             focus:transition-all
             focus:duration-400
 
-            group-hover:scale-110
+            md:group-hover:scale-110
             group-hover:transition-all
             group-hover:duration-300
             group-hover:brightness-100

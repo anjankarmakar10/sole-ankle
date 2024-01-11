@@ -10,7 +10,7 @@ const SalePage = () => {
       </header>
 
       <div className="flex gap-8 justify-center">
-        <div className="hidden md:flex">
+        <div className="hidden md:flex md:basis-[120px] lg:basis-[248px]">
           <Sidebar />
         </div>
         <ShoeGrid />
