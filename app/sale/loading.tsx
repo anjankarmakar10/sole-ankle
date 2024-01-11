@@ -1,3 +1,4 @@
+import ShoeCardSkeleton from "@/components/shoe-card-skeleton";
 import { Skeleton } from "@/components/ui/skeleton";
 
 const LoadingPage = () => {
@@ -35,16 +36,7 @@ const LoadingPage = () => {
         </div>
         <section className="flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 ">
           {new Array(6).fill("").map((_, index) => (
-            <article key={index} className="flex  flex-col gap-[14px] w-full">
-              <div className="w-full">
-                <Skeleton className="w-full h-[218px] rounded-s-2xl  rounded-e-2xl  rounded-b-lg " />
-              </div>
-              <div className="flex  justify-between gap-1 items-center">
-                <Skeleton className="h-6 w-[226px]" />
-                <Skeleton className="h-6 w-[64px]" />
-              </div>
-              <Skeleton className="h-6 w-[50px]" />
-            </article>
+            <ShoeCardSkeleton key={index} />
           ))}
         </section>
       </div>
