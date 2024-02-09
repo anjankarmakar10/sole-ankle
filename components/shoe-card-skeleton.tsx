@@ -2,7 +2,7 @@ import { Skeleton } from "./ui/skeleton";
 
 const ShoeCardSkeleton = () => {
   return (
-    <article key={index} className="flex  flex-col gap-[14px] w-full">
+    <article className="flex  flex-col gap-[14px] w-full">
       <div className="w-full">
         <Skeleton className="w-full h-[218px] rounded-s-2xl  rounded-e-2xl  rounded-b-lg " />
       </div>

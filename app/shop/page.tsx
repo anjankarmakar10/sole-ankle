@@ -2,7 +2,7 @@ import ShoeGrid from "@/components/shoe-grid";
 import ShoePageHeader from "@/components/shoe-page-header";
 import Sidebar from "@/components/shoe-sidebar";
 
-const SalePage = () => {
+const ShopPage = () => {
   return (
     <div className="mt-8 md:mt-8 px-8 pb-8 flex flex-col gap-8">
       <header>
@@ -18,4 +18,4 @@ const SalePage = () => {
     </div>
   );
 };
-export default SalePage;
+export default ShopPage;

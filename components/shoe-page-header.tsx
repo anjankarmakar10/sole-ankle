@@ -16,7 +16,7 @@ const ShoePageHeader = () => {
             <span className="mx-2 ">/</span>
           </li>
 
-          <li className="">Sale</li>
+          <li className="">Shop</li>
         </ol>
       </div>
       <div className="flex-1 flex justify-between items-center">

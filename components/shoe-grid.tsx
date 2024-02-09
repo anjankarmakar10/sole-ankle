@@ -2,8 +2,6 @@
 
 import Link from "next/link";
 import ShoeCard from "./shoe-card";
-import { getShoes } from "@/lib/api";
-import useShoes from "@/hooks/useShoes";
 import { useSelector } from "react-redux";
 import { RootState } from "@/redux/store/store";
 import { Skeleton } from "./ui/skeleton";
