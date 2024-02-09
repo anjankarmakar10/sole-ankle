@@ -9,14 +9,14 @@ const ShoePageHeader = () => {
         <ol className="list-reset flex text-sm text-gray-600 font-medium">
           <li>
             <a href="#" className="">
-              Home
+              Shop
             </a>
           </li>
           <li>
             <span className="mx-2 ">/</span>
           </li>
 
-          <li className="">Shop</li>
+          <li className="">Sale</li>
         </ol>
       </div>
       <div className="flex-1 flex justify-between items-center">
